@@ -1,11 +1,12 @@
 require 'faker'
 
-puts Faker::Name.name
-#Get names from input
-puts "Give names and saperate with comma's"
-names = gets.chop
+x = 0
+names = []
 
-#Slice string up
-array = names.split(',')
-array.each {|name| puts "Hello, #{name.capitalize}"}
+while x <= 10
+  names.push(Faker::Name.first_name)
+  x += 1
+end
+
+names.each {|name| puts "Hello, #{name.capitalize}"}
 
